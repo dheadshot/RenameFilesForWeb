@@ -25,7 +25,7 @@ Parameter | Use
 `<directory name>` | The directory path in which to rename files.
 `/r` | Optional parameter.  With this, RenameFilesForWeb will go through the directory and specified subdirectories recursively.  Without it, the files in any subdirectories within the specified path will remain untouched.
 
-The recursive ("`/r`") option is recommended for actual use since this will do all renames automatically.  Remember to redirect program output into a file in case of any files that are unable to be renamed.
+The recursive ("`/r`") option is recommended for actual use since this will do all renames automatically.  Remember to redirect program output into a file in case of any files that are unable to be renamed (e.g. "`rffw.exe /r C:\Users\Admin\Documents\A_Directory > rffwlog.txt`").
 
 ### Important Note
 
