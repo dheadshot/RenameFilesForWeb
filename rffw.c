@@ -75,46 +75,54 @@ DWORD RenameFiles(char *szDir, char *fargptr, int recurs)
     dwError = GetLastError();
     return dwError;
   } 
-  long ic = 0;
+  long ic = 0, ict;
   int changed = 0;
   char afn[MAX_PATH] = "\0";
   do
   {
     changed = 0;
-        ic = 0;
+         ic = 0;
+        ict = 0;
     strcpy(afn,ffd.cFileName);
-    while (ic >= 0)
+    while (ict >= 0)
     {
+      ict = 0;
       ic = FindChar(afn, strlen(afn),'&');
       if (ic >= 0)
           {
             afn[ic] = '_';
             changed = 1;
+            ict++;
           }
           ic = FindChar(afn, strlen(afn),'#');
       if (ic >= 0)
           {
             afn[ic] = '_';
             changed = 1;
+            ict++;
           }
           ic = FindChar(afn, strlen(afn),'@');
       if (ic >= 0)
           {
             afn[ic] = '_';
             changed = 1;
+            ict++;
           }
           ic = FindChar(afn, strlen(afn),'+');
       if (ic >= 0)
           {
             afn[ic] = '_';
             changed = 1;
+            ict++;
           }
           ic = FindChar(afn, strlen(afn),'\'');
       if (ic >= 0)
           {
             afn[ic] = '_';
             changed = 1;
+            ict++;
           }
+      ict--;
     }
     if (changed)
     {
