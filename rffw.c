@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
   
   if((argc < 2 || argc > 3) || ((argc > 2) && (streq_(argv[1],"/r"))==0) || (streq_(argv[1],"/?")))
   {
-      printf("\r\nDHSC RenameFilesForWeb 1.20.00 \r\nTwitter @DHeadshot\r\nRenames files for use in MS SharePoint and other systems\r\n");
+      printf("\r\nDHSC RenameFilesForWeb 1.21.00 \r\nTwitter @DHeadshot\r\nRenames files for use in MS SharePoint and other systems\r\n");
       printf("Usage: %s [/r] <directory name>\r\n", argv[0]);
           printf("\t/r\tGoes through the directories recursively within the path.  \r\n");
           printf("\t\tWithout this option, it renames only files in the specified \r\n\t\tdirectory and not in subdirectories.");
