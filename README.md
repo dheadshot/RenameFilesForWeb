@@ -1,6 +1,6 @@
 # RenameFileForWeb
 
-RenameFileForWeb is a little program I wrote to strip special characters out of filenames in preparation for being uploaded to Microsoft SharePoint.  SharePoint has (or had, they may have fixed it now) a linitation that it didn't recognise files with certain characters in the name.  RenameFilesForWeb goes through every file in a specified path and renames them according to this rule.
+RenameFileForWeb is a little program I wrote to strip special characters out of filenames in preparation for being uploaded to Microsoft SharePoint.  SharePoint has (or had, they may have fixed it now) a limitation that it didn't recognise files with certain characters in the name.  RenameFilesForWeb goes through every file in a specified path and renames them according to this rule.
 
 RenameFileForWeb outputs results to the standard output, therefore it is worth running it from the command prompt and redirecting the output to a file for review later, since if it cannot rename a file (maybe there's already a file with its intended name) it will flag this in the results.  These flagged files must then be renamed manually.
 
@@ -14,7 +14,7 @@ RenameFileForWeb removes the following characters from filenames:
 * "#"
 * "@"
 * "+"
-* "\" (not that this is allowed in windows anyway.)
+* "\\" (not that this is allowed in windows anyway.)
 
 ## Program Usage
 
@@ -37,6 +37,7 @@ RenameFilesForWeb was originally created by DHeadshot (as part of DHSC) in 2016 
 
 ## Version History
 
+* Version 1.21.00 - Fixed a major bug that meant that only the first character was replaced.
 * Version 1.20.00 - First version made open-source.  Added extra files for ease of compilation.
 * Version 1.10.01 - Added usage information to program.
 * Version 1.10.00 - Added the Recursive mode to rename all files in a directory tree.
